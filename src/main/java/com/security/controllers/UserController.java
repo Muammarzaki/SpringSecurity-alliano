@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.security.model.entity.Users;
-import com.security.security.UserService;
+import com.security.services.UserService;
 
 @RestController
 @RequestMapping(path = "/")
@@ -26,7 +26,7 @@ public class UserController {
       return userService.findAllUsers();
    }
 
-   @GetMapping(path = "/home")
+   @GetMapping(path = "home")
    public String home(){
       return "<h1>still develop</h1>";
    }

@@ -1,4 +1,4 @@
-package com.security.security;
+package com.security.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,14 +7,14 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.security.model.dao.UsersDao;
 import com.security.model.entity.Role;
 import com.security.model.entity.Users;
+import com.security.model.repositories.Userrepository;
 
 @Service
 public class UserService implements UserDetailsService {
    
-   private @Autowired UsersDao usersDao;
+   private @Autowired Userrepository usersDao;
 
    @Autowired
    private BCryptPasswordEncoder bCryptPasswordEncoder;

@@ -1,13 +1,13 @@
-package com.test.demo.configuration;
+package com.security.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
-public class BcrcptConfig {
+public class BcryptPasswordEncoderConf {
    
-   @Bean(value = "bcryptEncode")
+   @Bean
    public BCryptPasswordEncoder bcrypt(){
       return new BCryptPasswordEncoder(10);
    }
