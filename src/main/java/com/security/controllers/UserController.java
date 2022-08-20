@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.security.model.entity.Users;
-import com.security.services.UserService;
+import com.security.security.UserService;
 
 @RestController
 @RequestMapping(path = "/")
