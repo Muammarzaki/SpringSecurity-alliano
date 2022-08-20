@@ -8,6 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.security.model.dao.UsersDao;
+import com.security.model.entity.Role;
 import com.security.model.entity.Users;
 
 @Service
@@ -19,6 +20,7 @@ public class UserService implements UserDetailsService {
    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
    public Users save(Users entity){
+      entity.setRole(Role.USER);
       entity.setPassword(bCryptPasswordEncoder.encode(entity.getPassword()));
       return usersDao.save(entity);
    }
